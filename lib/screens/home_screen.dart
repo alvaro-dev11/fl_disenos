@@ -1,4 +1,5 @@
 import 'package:fl_disenos/widgets/background.dart';
+import 'package:fl_disenos/widgets/custom_bottom_navigation.dart';
 import 'package:fl_disenos/widgets/page_title.dart';
 import 'package:flutter/material.dart';
 
@@ -8,15 +9,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body: Stack(
-      children: [
-        // Background
-        Background(),
-
-// Home Body
-        _HomeBody()
-      ],
-    ));
+      body: Stack(
+        children: [
+          // Background
+          Background(),
+          // Home Body
+          _HomeBody(),
+        ],
+      ),
+      bottomNavigationBar: CustomBottomNavigation(),
+    );
   }
 }
 
